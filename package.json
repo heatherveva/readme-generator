@@ -1,0 +1,26 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "readme generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "readme"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heatherveva/readme-generator.git"
+  },
+  "keywords": [
+    "readme",
+    "generator"
+  ],
+  "author": "Heather Stevens",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/heatherveva/readme-generator/issues"
+  },
+  "homepage": "https://github.com/heatherveva/readme-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
