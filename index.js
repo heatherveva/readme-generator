@@ -1,7 +1,6 @@
 //generate license TEXT within the body of the readme
 function insertBadgeText(license) {
   let licenseText;
-  console.log(license);
 
   switch (license) {
     case "APACHE 2.0":
@@ -22,7 +21,7 @@ function insertBadgeText(license) {
       break;
 
     case "None":
-      licenseText = "";
+      licenseText = "This application is not covered under a license.";
       break;
   }
 
@@ -137,16 +136,21 @@ inquirer
       type: "input",
       message: "Insert the link to your application's page.",
     },
+    {
+      name: "tests",
+      type: "input",
+      message:
+        "Are there tests associated with your application? If so, provide examples on how to run them.",
+    },
   ])
 
   //answer to promise - what to do with the answers user provides
   .then((answers) => {
     const badge = insertBadge(answers.license);
-    console.log(answers);
-    const licenseText = insertBadgeText(answers.license);
-    console.log("licenseText" + licenseText);
-    const readMe = generateReadme(answers, badge, licenseText);
 
+    const licenseText = insertBadgeText(answers.license);
+
+    const readMe = generateReadme(answers, badge, licenseText);
     fs.writeFile("readme.md", readMe, process.argv[2], (err) =>
       err ? console.error(err) : console.log("Success!")
     );
@@ -165,16 +169,16 @@ const generateReadme = (
     emailAddress,
     gitHubLink,
     applicationPage,
+    tests,
   },
   badge,
   licenseText
 ) => {
-  console.log(badge);
   return `# ${projectTitle}
 
 ${badge}
 
-    ## Table of Contents
+## Table of Contents
 
     - [Description](#description)
     - [Installation](#installation)
@@ -186,41 +190,43 @@ ${badge}
     - [Contact Me](#contactme)
     - [Links](#links)
   
-    ## Description
+## Description
 
 ${description}
     
-    ## Installation
+## Installation
 
 ${installation}
     
-    ## Usage
+## Usage
 
 ${usage}
 
-    ### Screenshot
+## Screenshot
 
 ![${screenshotDescription}](${screenshotPath})
     
-    ## License
+## License
 
 ${licenseText}
     
-    ## Contributing
+## Contributing
 
 ${contributing}
     
-    ## Tests
+## Tests
+
+${tests}
     
-    ## Contact Me
+## Contact Me
 
-    GitHub: ${gitHubName}
+GitHub: ${gitHubName}
 
-    Email: ${emailAddress}
+Email: ${emailAddress}
 
-    ## Links
+## Links
 
-    Here is a link to the repository: ${gitHubLink}
+Here is a link to the repository: ${gitHubLink}
 
-    Here is the page: ${applicationPage}`;
+Here is the page: ${applicationPage}`;
 };

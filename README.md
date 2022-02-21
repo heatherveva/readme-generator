@@ -1,8 +1,8 @@
-# 
+# Heather's ReadMe Generator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-    ## Table of Contents
+## Table of Contents
 
     - [Description](#description)
     - [Installation](#installation)
@@ -14,39 +14,42 @@
     - [Contact Me](#contactme)
     - [Links](#links)
   
-    ## Description
+## Description
 
-
+This program will generate a README file after a user answers a series of prompts. 
     
-    ## Installation
+## Installation
 
-
+Install npm and inquirer first. 
     
-    ## Usage
+## Usage
 
+Use this to generate high quality READMEs quickly!
 
+## Screenshot
 
-    ### Screenshot
-
-![](./)
+![This is a screenshot of the program. ](./screenshot)
     
-    ## License
+## License
 
-This application is covered under an MIT License.
+This application is covered under Apache 2.0.
     
-    ## Contributing
+## Contributing
 
-
+None.
     
-    ## Tests
+## Tests
+
+No tests. 
     
-    ## Contact Me
+## Contact Me
 
-GitHub: 
-Email: @
+GitHub: Link goes here. 
 
-    ## Links
+Email: heatherveva@gmail.com
 
-Here is a link to the repository: 
+## Links
 
-Here is the page: 
+Here is a link to the repository: Link goes here. 
+
+Here is the page: Link goes here. 
